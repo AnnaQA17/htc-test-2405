@@ -1,0 +1,112 @@
+body {
+  background: #333333;
+  font-family: Arial;
+  padding: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+a {
+  color: #ffffff;
+}
+
+form {
+  max-width: 450px;
+  margin: 0 auto 0 auto;
+}
+form > div {
+  position: relative;
+  background: white;
+  border-bottom: 1px solid #cccccc;
+}
+form > div.remember {
+  position: relative;
+  background: white;
+  padding: 20px 20px 20px 20px;
+  border-bottom: 1px solid #cccccc;
+  font-weight: bold;
+  color: #888888;
+}
+form > div > label {
+  opacity: 0.3;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+
+form > div > input[type="email"],
+form > div > input[type="password"] {
+  width: 100%;
+  border: 0;
+  padding: 20px 20px 20px 50px;
+  background: #eeeeee;
+  font-size: 18px;
+}
+form > div > input[type="email"]:focus,
+form > div > input[type="password"]:focus {
+  outline: 0;
+  background: #ffffff;
+}
+form > div > input[type="email"]:focus + label,
+form > div > input[type="password"]:focus + label {
+  opacity: 0;
+}
+form > div > input[type="email"]:valid,
+form > div > input[type="password"]:valid {
+  background: url(icon_done.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+}
+form > div > input[type="email"]:valid + label,
+form > div > input[type="password"]:valid + label {
+  opacity: 0;
+}
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form
+  > div
+  > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+  background: #ffc0cb;
+}
+form
+  > div
+  > input[type="email"]:invalid:not(:focus):not(:placeholder-shown)
+  + label,
+form
+  > div
+  > input[type="password"]:invalid:not(:focus):not(:placeholder-shown)
+  + label {
+  opacity: 0;
+}
+form
+  > div
+  > input[type="email"]:invalid:not(:focus):not(:placeholder-shown)
+  ~ .requirements,
+form
+  > div
+  > input[type="password"]:invalid:not(:focus):not(:placeholder-shown)
+  ~ .requirements {
+  max-height: 200px;
+  padding: 10px 30px 10px 50px;
+  color: #dc143c;
+}
+form > div > .requirements {
+  padding: 0 30px 0 50px;
+  max-height: 0;
+  transition: 0.28s;
+  overflow: hidden;
+  color: #dc143c;
+  font-style: italic;
+}
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  background: #41d873;
+  color: #ffffff;
+  border: 0;
+  padding: 20px;
+  font-size: 1.2rem;
+}
